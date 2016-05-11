@@ -61,12 +61,12 @@
 
     <div class="container margin-top-50">
 
-      <div class="row">
-        <div class="col-lg-4 col-md-6">
+      <div class="row masonry-container">
+        <div class="col-lg-4 col-md-6 item">
           <div class="well">
             <img src="images/food1.jpg" width="100%" max-height="300" />
             <h4><div data-lorem="1-2w" class="pull-left  margin-right-10"></div>Cafe </h4>
-            <p class="text-muted"><div data-lorem="15w"></div></p>
+            <p class="text-muted"><div data-lorem="10-13w"></div></p>
             <p>
               <button type="button" onClick="counter1up()" class="btn btn-primary margin-right-10"><i class="fa fa-thumbs-up"></i></button>
               <button type="button" onClick="counter1down()" class="btn btn-danger margin-right-10"><i class="fa fa-thumbs-down"></i></button>
@@ -75,11 +75,11 @@
             <p>Likes: <a id="counter1">0</a></p>
           </div>
         </div>
-        <div class="col-lg-4 col-md-6">
+        <div class="col-lg-4 col-md-6 item">
           <div class="well">
             <img src="images/food2.jpg" width="100%" />
             <h4><div data-lorem="1-2w" class="pull-left margin-right-10"></div>Cafe </h4>
-            <p class="text-muted"><div data-lorem="15w"></div></p>
+            <p class="text-muted"><div data-lorem="10-13w"></div></p>
             <p>
               <button type="button" onClick="counter2up()" class="btn btn-primary margin-right-10"><i class="fa fa-thumbs-up"></i></button>
               <button type="button" onClick="counter2down()" class="btn btn-danger margin-right-10"><i class="fa fa-thumbs-down"></i></button>
@@ -88,11 +88,11 @@
             <p>Likes: <a id="counter2">0</a></p>
           </div>
         </div>
-        <div class="col-lg-4 col-md-6">
+        <div class="col-lg-4 col-md-6 item">
           <div class="well">
             <img src="images/food3.jpg" width="100%" />
             <h4><div data-lorem="1-2w" class="pull-left margin-right-10"></div>Cafe </h4>
-            <p class="text-muted"><div data-lorem="15w"></div></p>
+            <p class="text-muted"><div data-lorem="10-13w"></div></p>
             <p>
               <button type="button" onClick="counter3up()" class="btn btn-primary margin-right-10"><i class="fa fa-thumbs-up"></i></button>
               <button type="button" onClick="counter3down()" class="btn btn-danger margin-right-10"><i class="fa fa-thumbs-down"></i></button>
@@ -102,11 +102,11 @@
           </div>
         </div>
 
-        <div class="col-lg-4 col-md-6">
+        <div class="col-lg-4 col-md-6 item">
           <div class="well">
             <img src="images/food4.jpg" width="100%" max-height="300" />
             <h4><div data-lorem="1-2w" class="pull-left margin-right-10"></div>Cafe </h4>
-            <p class="text-muted"><div data-lorem="15w"></div></p>
+            <p class="text-muted"><div data-lorem="10-13w"></div></p>
             <p>
               <button type="button" onClick="counter4up()" class="btn btn-primary margin-right-10"><i class="fa fa-thumbs-up"></i></button>
               <button type="button" onClick="counter4down()" class="btn btn-danger margin-right-10"><i class="fa fa-thumbs-down"></i></button>
@@ -115,11 +115,11 @@
             <p>Likes: <a id="counter4">0</a></p>
           </div>
         </div>
-        <div class="col-lg-4 col-md-6">
+        <div class="col-lg-4 col-md-6 item">
           <div class="well">
             <img src="images/food5.jpg" width="100%" />
             <h4><div data-lorem="1-2w" class="pull-left margin-right-10"></div>Cafe </h4>
-            <p class="text-muted"><div data-lorem="15w"></div></p>
+            <p class="text-muted"><div data-lorem="10-13w"></div></p>
             <p>
               <button type="button" onClick="counter5up()" class="btn btn-primary margin-right-10"><i class="fa fa-thumbs-up"></i></button>
               <button type="button" onClick="counter5down()" class="btn btn-danger margin-right-10"><i class="fa fa-thumbs-down"></i></button>
@@ -128,11 +128,11 @@
             <p>Likes: <a id="counter5">0</a></p>
           </div>
         </div>
-        <div class="col-lg-4 col-md-6">
+        <div class="col-lg-4 col-md-6 item">
           <div class="well">
             <img src="images/food6.jpg" width="100%" />
             <h4><div data-lorem="1-2w" class="pull-left margin-right-10"></div>Cafe </h4>
-            <p class="text-muted"><div data-lorem="15w"></div></p>
+            <p class="text-muted"><div data-lorem="10-13w"></div></p>
             <p>
               <button type="button" onClick="counter6up()" class="btn btn-primary margin-right-10"><i class="fa fa-thumbs-up"></i></button>
               <button type="button" onClick="counter6down()" class="btn btn-danger margin-right-10"><i class="fa fa-thumbs-down"></i></button>
@@ -307,6 +307,26 @@
 
     <!-- lorem JavaScript -->
     <script src="js/lorem.js"></script>
+
+    <!-- lorem JavaScript -->
+    <script src="js/imagesloaded.js"></script>
+    <script src="js/masonary.min.js"></script>
+    
+
+    <script type="text/javascript">
+      //Initialize Masonry inside Bootstrap 3 Tab component 
+
+      (function ($) {
+          var $container = $('.masonry-container');
+          $container.imagesLoaded(function () {
+              $container.masonry({
+                  columnWidth: '.item',
+                  itemSelector: '.item'
+              });
+          });
+      }(jQuery));
+
+    </script>
 
     <!-- datepicker JavaScript 
     <script src="js/bootstrap-datetimepicker.min.js"></script>
