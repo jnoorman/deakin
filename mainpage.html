@@ -6,11 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="description" content="This is a super review site">
+    <meta name="author" content="Jason Noorman">
     <link rel="icon" href="../../favicon.ico">
 
-    <title>Super reviews2</title>
+    <title>Super reviews</title>
 
     <!-- Latest compiled and minified CSS -->
   	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
@@ -23,15 +23,16 @@
 
     <!-- Paper theme -->
   	<link href="css/bootstrap-paper.css" rel="stylesheet">
-
-    <!-- Custom css -->
-    <link href="css/custom.css" rel="stylesheet">
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
 
     <!-- Fontawesome for this template -->
   	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css" rel="stylesheet">
 
-    <!-- Fontawesome for this template 
-    <link href="css/bootstrap-datetimepicker.min.css" rel="stylesheet"> -->
+    <!-- Fontawesome for this template -->
+    <link href="css/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
+
+    <!-- Custom css -->
+    <link href="css/custom.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -41,7 +42,6 @@
   </head>
 
   <body>
-
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
@@ -60,7 +60,6 @@
     </nav>
 
     <div class="container margin-top-50">
-
       <div class="row masonry-container">
         <div class="col-lg-4 col-md-6 item">
           <div class="well">
@@ -143,7 +142,6 @@
             <p>Likes: <a id="counter6">0</a></p>
           </div>
         </div>
-
       </div>
 
       <!-- Modal -->
@@ -159,28 +157,16 @@
 
               <form class="form-horizontal">
                 <fieldset>
+              
                   <div class="form-group">
-                    <label for="inputEmail" class="col-lg-2 control-label">Date</label>
-                    
-
+                    <label for="date" class="col-lg-2 control-label">Date</label>
                     <div class="col-lg-10">
-                      <input type="text" class="form-control" id="inputEmail" placeholder="Date">
-                      <!-- 
-                      <div id="datetimepicker1" class="input-append date"></div>
-                      <input data-format="dd/MM/yyyy hh:mm:ss" type="text"></input>
-                      <span class="add-on">
-                        <i data-time-icon="icon-time" data-date-icon="icon-calendar">
-                        </i>
-                      </span> -->
-
-                    </div>
-
-                  </div>
-                  <div class="form-group">
-                    <label for="inputPassword" class="col-lg-2 control-label">Time</label>
-                    <div class="col-lg-10">
-                      <input type="text" class="form-control" id="inputPassword" placeholder="Time">
-                    </div>
+                      <div class="input-group date form_datetime" data-date="" data-date-format="dd MM yyyy - HH:ii p" data-link-field="dtp_input1">
+                          <input class="form-control" size="16" type="text" value=""  id="date" readonly>
+                          <span class="input-group-addon"><span class="fa fa-remove"></span></span>
+                <span class="input-group-addon"><span class="fa fa-calendar"></span></span>
+                      </div>
+                     </div> 
                   </div>
 
                   <div class="form-group">
@@ -195,7 +181,6 @@
                       </select>
                     </div>
                   </div>
-
 
                   <div class="form-group">
                     <label for="textArea" class="col-lg-2 control-label">Any Special requirements</label>
@@ -213,8 +198,6 @@
                   </div>
                 </fieldset>
               </form>
-
-              
             </div>
           </div>
         </div>
@@ -229,20 +212,19 @@
       </footer>
     </div> <!-- /container -->
 
-
     <script type="text/javascript">
 
-    var clicks = [0,0,0,0,0,0];
+      var clicks = [0,0,0,0,0,0];
 
-    function like(data, id) {
-        clicks[id] += 1;
-        document.getElementById(data).innerHTML = clicks[id];
-    };
+      function like(data, id) {
+          clicks[id] += 1;
+          document.getElementById(data).innerHTML = clicks[id];
+      };
 
-    function dislike(data, id) {
-        clicks[id] -= 1;
-        document.getElementById(data).innerHTML = clicks[id];
-    };
+      function dislike(data, id) {
+          clicks[id] -= 1;
+          document.getElementById(data).innerHTML = clicks[id];
+      };
 
     </script>
 
@@ -264,13 +246,14 @@
     <!-- lorem JavaScript -->
     <script src="js/lorem.js"></script>
 
-    <!-- lorem JavaScript -->
+    <!-- Masonry JavaScript -->
     <script src="js/imagesloaded.js"></script>
     <script src="js/masonary.min.js"></script>
-    
+
+    <!-- Date/Time input JavaScript -->
+    <script type="text/javascript" src="js/bootstrap-datetimepicker.min.js" charset="UTF-8"></script>
 
     <script type="text/javascript">
-      //Initialize Masonry inside Bootstrap 3 Tab component 
 
       (function ($) {
           var $container = $('.masonry-container');
@@ -282,19 +265,18 @@
           });
       }(jQuery));
 
+    $('.form_datetime').datetimepicker({
+        weekStart: 1,
+        todayBtn:  1,
+        autoclose: 1,
+        todayHighlight: 1,
+        startView: 2,
+        forceParse: 0,
+        showMeridian: 1,
+        pickerPosition: "bottom-left"
+    });
+
     </script>
-
-    <!-- datepicker JavaScript 
-    <script src="js/bootstrap-datetimepicker.min.js"></script>
-
-    <script type="text/javascript">
-      $(function() {
-        $('#datetimepicker1').datetimepicker({
-          language: 'en',
-          pick12HourFormat: true
-        });
-      });
-    </script> -->
 
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
