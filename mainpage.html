@@ -68,9 +68,11 @@
             <h4><div data-lorem="1-2w" class="pull-left  margin-right-10"></div>Cafe </h4>
             <p class="text-muted"><div data-lorem="15-22w"></div></p>
             <p>
-              <button type="button" onClick="counter1up()" class="btn btn-primary margin-right-10"><i class="fa fa-thumbs-up"></i></button>
-              <button type="button" onClick="counter1down()" class="btn btn-danger margin-right-10"><i class="fa fa-thumbs-down"></i></button>
+              <button type="button" onClick="like('counter1',0)" class="btn btn-primary margin-right-10"><i class="fa fa-thumbs-up"></i></button>
+              <button type="button" onClick="dislike('counter1',0)" class="btn btn-danger margin-right-10"><i class="fa fa-thumbs-down"></i></button>
               <button type="button" class="btn btn-warning pull-right" data-toggle="modal" data-target="#bookingModal"><i class="fa fa-clock-o"></i> Book Now</button>
+<br/>
+              
             </p>
             <p>Likes: <a id="counter1">0</a></p>
           </div>
@@ -81,8 +83,8 @@
             <h4><div data-lorem="1-2w" class="pull-left margin-right-10"></div>Cafe </h4>
             <p class="text-muted"><div data-lorem="15-22w"></div></p>
             <p>
-              <button type="button" onClick="counter2up()" class="btn btn-primary margin-right-10"><i class="fa fa-thumbs-up"></i></button>
-              <button type="button" onClick="counter2down()" class="btn btn-danger margin-right-10"><i class="fa fa-thumbs-down"></i></button>
+              <button type="button" onClick="like('counter2',1)" class="btn btn-primary margin-right-10"><i class="fa fa-thumbs-up"></i></button>
+              <button type="button" onClick="dislike('counter2',1)" class="btn btn-danger margin-right-10"><i class="fa fa-thumbs-down"></i></button>
               <button type="button" class="btn btn-warning pull-right" data-toggle="modal" data-target="#bookingModal"><i class="fa fa-clock-o"></i> Book Now</button>
             </p>
             <p>Likes: <a id="counter2">0</a></p>
@@ -94,8 +96,8 @@
             <h4><div data-lorem="1-2w" class="pull-left margin-right-10"></div>Cafe </h4>
             <p class="text-muted"><div data-lorem="15-22w"></div></p>
             <p>
-              <button type="button" onClick="counter3up()" class="btn btn-primary margin-right-10"><i class="fa fa-thumbs-up"></i></button>
-              <button type="button" onClick="counter3down()" class="btn btn-danger margin-right-10"><i class="fa fa-thumbs-down"></i></button>
+              <button type="button" onClick="like('counter3',2)" class="btn btn-primary margin-right-10"><i class="fa fa-thumbs-up"></i></button>
+              <button type="button" onClick="dislike('counter3',2)" class="btn btn-danger margin-right-10"><i class="fa fa-thumbs-down"></i></button>
               <button type="button" class="btn btn-warning pull-right" data-toggle="modal" data-target="#bookingModal"><i class="fa fa-clock-o"></i> Book Now</button>
             </p>
             <p>Likes: <a id="counter3">0</a></p>
@@ -108,8 +110,8 @@
             <h4><div data-lorem="1-2w" class="pull-left margin-right-10"></div>Cafe </h4>
             <p class="text-muted"><div data-lorem="15-22w"></div></p>
             <p>
-              <button type="button" onClick="counter4up()" class="btn btn-primary margin-right-10"><i class="fa fa-thumbs-up"></i></button>
-              <button type="button" onClick="counter4down()" class="btn btn-danger margin-right-10"><i class="fa fa-thumbs-down"></i></button>
+              <button type="button" onClick="like('counter4',3)" class="btn btn-primary margin-right-10"><i class="fa fa-thumbs-up"></i></button>
+              <button type="button" onClick="dislike('counter4',3)" class="btn btn-danger margin-right-10"><i class="fa fa-thumbs-down"></i></button>
               <button type="button" class="btn btn-warning pull-right" data-toggle="modal" data-target="#bookingModal"><i class="fa fa-clock-o"></i> Book Now</button>
             </p>
             <p>Likes: <a id="counter4">0</a></p>
@@ -121,8 +123,8 @@
             <h4><div data-lorem="1-2w" class="pull-left margin-right-10"></div>Cafe </h4>
             <p class="text-muted"><div data-lorem="15-22w"></div></p>
             <p>
-              <button type="button" onClick="counter5up()" class="btn btn-primary margin-right-10"><i class="fa fa-thumbs-up"></i></button>
-              <button type="button" onClick="counter5down()" class="btn btn-danger margin-right-10"><i class="fa fa-thumbs-down"></i></button>
+              <button type="button" onClick="like('counter5',4)" class="btn btn-primary margin-right-10"><i class="fa fa-thumbs-up"></i></button>
+              <button type="button" onClick="dislike('counter5',4)" class="btn btn-danger margin-right-10"><i class="fa fa-thumbs-down"></i></button>
               <button type="button" class="btn btn-warning pull-right" data-toggle="modal" data-target="#bookingModal"><i class="fa fa-clock-o"></i> Book Now</button>
             </p>
             <p>Likes: <a id="counter5">0</a></p>
@@ -134,8 +136,8 @@
             <h4><div data-lorem="1-2w" class="pull-left margin-right-10"></div>Cafe </h4>
             <p class="text-muted"><div data-lorem="15-22w"></div></p>
             <p>
-              <button type="button" onClick="counter6up()" class="btn btn-primary margin-right-10"><i class="fa fa-thumbs-up"></i></button>
-              <button type="button" onClick="counter6down()" class="btn btn-danger margin-right-10"><i class="fa fa-thumbs-down"></i></button>
+              <button type="button" onClick="like('counter6',5)" class="btn btn-primary margin-right-10"><i class="fa fa-thumbs-up"></i></button>
+              <button type="button" onClick="dislike('counter6',5)" class="btn btn-danger margin-right-10"><i class="fa fa-thumbs-down"></i></button>
               <button type="button" class="btn btn-warning pull-right" data-toggle="modal" data-target="#bookingModal"><i class="fa fa-clock-o"></i> Book Now</button>
             </p>
             <p>Likes: <a id="counter6">0</a></p>
@@ -230,62 +232,16 @@
 
     <script type="text/javascript">
 
-    var clicks1 = 0;
-    var clicks2 = 0;
-    var clicks3 = 0;
-    var clicks4 = 0;
-    var clicks5 = 0;
-    var clicks6 = 0;
+    var clicks = [0,0,0,0,0,0];
 
-    function counter1up() {
-        clicks1 += 1;
-        document.getElementById("counter1").innerHTML = clicks1;
+    function like(data, id) {
+        clicks[id] += 1;
+        document.getElementById(data).innerHTML = clicks[id];
     };
-    function counter2up() {
-        clicks2 += 1;
-        document.getElementById("counter2").innerHTML = clicks2;
-    };
-    function counter3up() {
-        clicks3 += 1;
-        document.getElementById("counter3").innerHTML = clicks3;
-    };
-    function counter4up() {
-        clicks4 += 1;
-        document.getElementById("counter4").innerHTML = clicks4;
-    };
-    function counter5up() {
-        clicks5 += 1;
-        document.getElementById("counter5").innerHTML = clicks5;
-    };
-    function counter6up() {
-        clicks6 += 1;
-        document.getElementById("counter6").innerHTML = clicks6;
-    };   
 
-
-    function counter1down() {
-        clicks1 -= 1;
-        document.getElementById("counter1").innerHTML = clicks1;
-    };
-    function counter2down() {
-        clicks2 -= 1;
-        document.getElementById("counter2").innerHTML = clicks2;
-    };
-    function counter3down() {
-        clicks3 -= 1;
-        document.getElementById("counter3").innerHTML = clicks3;
-    };
-    function counter4down() {
-        clicks4 -= 1;
-        document.getElementById("counter4").innerHTML = clicks4;
-    };
-    function counter5down() {
-        clicks5 -= 1;
-        document.getElementById("counter5").innerHTML = clicks5;
-    };
-    function counter6down() {
-        clicks6 -= 1;
-        document.getElementById("counter6").innerHTML = clicks6;
+    function dislike(data, id) {
+        clicks[id] -= 1;
+        document.getElementById(data).innerHTML = clicks[id];
     };
 
     </script>
