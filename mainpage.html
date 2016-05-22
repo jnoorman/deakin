@@ -5,10 +5,11 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
     <meta name="description" content="This is a super review site">
     <meta name="author" content="Jason Noorman">
-    <link rel="icon" href="../../favicon.ico">
+    
+    <link rel="icon" href="favicon.ico">
 
     <title>Super reviews</title>
 
@@ -25,10 +26,10 @@
   	<link href="css/bootstrap-paper.css" rel="stylesheet">
     <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
 
-    <!-- Fontawesome for this template -->
+    <!-- Fontawesome -->
   	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css" rel="stylesheet">
 
-    <!-- Fontawesome for this template -->
+    <!-- DatePicker for bootstrap -->
     <link href="css/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
 
     <!-- Custom css -->
@@ -39,6 +40,7 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+
   </head>
 
   <body>
@@ -70,10 +72,12 @@
               <button type="button" onClick="like('counter1',0)" class="btn btn-primary margin-right-10"><i class="fa fa-thumbs-up"></i></button>
               <button type="button" onClick="dislike('counter1',0)" class="btn btn-danger margin-right-10"><i class="fa fa-thumbs-down"></i></button>
               <button type="button" class="btn btn-warning pull-right" data-toggle="modal" data-target="#bookingModal"><i class="fa fa-clock-o"></i> Book Now</button>
+              <button type="button" class="btn btn-success pull-right margin-right-10" data-toggle="modal" data-target="#mapModal"><i class="fa fa-globe"></i></button>
+              
 <br/>
               
             </p>
-            <p>Likes: <a id="counter1">0</a></p>
+            <p><a id="counter1">0</a> likes</p>
           </div>
         </div>
         <div class="col-lg-4 col-md-6 item">
@@ -85,8 +89,9 @@
               <button type="button" onClick="like('counter2',1)" class="btn btn-primary margin-right-10"><i class="fa fa-thumbs-up"></i></button>
               <button type="button" onClick="dislike('counter2',1)" class="btn btn-danger margin-right-10"><i class="fa fa-thumbs-down"></i></button>
               <button type="button" class="btn btn-warning pull-right" data-toggle="modal" data-target="#bookingModal"><i class="fa fa-clock-o"></i> Book Now</button>
+              <button type="button" class="btn btn-success pull-right margin-right-10" data-toggle="modal" data-target="#mapModal"><i class="fa fa-globe"></i></button>
             </p>
-            <p>Likes: <a id="counter2">0</a></p>
+            <p><a id="counter2">0</a> likes</p>
           </div>
         </div>
         <div class="col-lg-4 col-md-6 item">
@@ -98,8 +103,9 @@
               <button type="button" onClick="like('counter3',2)" class="btn btn-primary margin-right-10"><i class="fa fa-thumbs-up"></i></button>
               <button type="button" onClick="dislike('counter3',2)" class="btn btn-danger margin-right-10"><i class="fa fa-thumbs-down"></i></button>
               <button type="button" class="btn btn-warning pull-right" data-toggle="modal" data-target="#bookingModal"><i class="fa fa-clock-o"></i> Book Now</button>
+              <button type="button" class="btn btn-success pull-right margin-right-10" data-toggle="modal" data-target="#mapModal"><i class="fa fa-globe"></i></button>
             </p>
-            <p>Likes: <a id="counter3">0</a></p>
+            <p><a id="counter3">0</a> likes</p>
           </div>
         </div>
 
@@ -112,8 +118,9 @@
               <button type="button" onClick="like('counter4',3)" class="btn btn-primary margin-right-10"><i class="fa fa-thumbs-up"></i></button>
               <button type="button" onClick="dislike('counter4',3)" class="btn btn-danger margin-right-10"><i class="fa fa-thumbs-down"></i></button>
               <button type="button" class="btn btn-warning pull-right" data-toggle="modal" data-target="#bookingModal"><i class="fa fa-clock-o"></i> Book Now</button>
+              <button type="button" class="btn btn-success pull-right margin-right-10" data-toggle="modal" data-target="#mapModal"><i class="fa fa-globe"></i></button>
             </p>
-            <p>Likes: <a id="counter4">0</a></p>
+            <p><a id="counter4">0</a> likes</p>
           </div>
         </div>
         <div class="col-lg-4 col-md-6 item">
@@ -125,8 +132,9 @@
               <button type="button" onClick="like('counter5',4)" class="btn btn-primary margin-right-10"><i class="fa fa-thumbs-up"></i></button>
               <button type="button" onClick="dislike('counter5',4)" class="btn btn-danger margin-right-10"><i class="fa fa-thumbs-down"></i></button>
               <button type="button" class="btn btn-warning pull-right" data-toggle="modal" data-target="#bookingModal"><i class="fa fa-clock-o"></i> Book Now</button>
+              <button type="button" class="btn btn-success pull-right margin-right-10" data-toggle="modal" data-target="#mapModal"><i class="fa fa-globe"></i></button>
             </p>
-            <p>Likes: <a id="counter5">0</a></p>
+            <p><a id="counter5">0</a> likes</p>
           </div>
         </div>
         <div class="col-lg-4 col-md-6 item">
@@ -138,13 +146,14 @@
               <button type="button" onClick="like('counter6',5)" class="btn btn-primary margin-right-10"><i class="fa fa-thumbs-up"></i></button>
               <button type="button" onClick="dislike('counter6',5)" class="btn btn-danger margin-right-10"><i class="fa fa-thumbs-down"></i></button>
               <button type="button" class="btn btn-warning pull-right" data-toggle="modal" data-target="#bookingModal"><i class="fa fa-clock-o"></i> Book Now</button>
+              <button type="button" class="btn btn-success pull-right margin-right-10" data-toggle="modal" data-target="#mapModal"><i class="fa fa-globe"></i></button>
             </p>
-            <p>Likes: <a id="counter6">0</a></p>
+            <p><a id="counter6">0</a> likes</p>
           </div>
         </div>
       </div>
 
-      <!-- Modal -->
+      <!-- Booking Modal -->
       <div class="modal fade" id="bookingModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
         <div class="modal-dialog" role="document">
           <div class="modal-content">
@@ -191,12 +200,48 @@
                   
                   <div class="form-group">
                     <div class="col-lg-10 col-lg-offset-2">
-                      <button type="button" class="btn btn-primary margin-right-10" data-dismiss="modal">Make Booking</button>
+                      <button type="button" class="btn btn-primary margin-right-10" data-dismiss="modal" data-toggle="modal" href="#confirmed">Make Booking</button>
                       <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                     </div>
                   </div>
                 </fieldset>
               </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Map Modal -->
+      <div class="modal fade" id="mapModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title" id="myModalLabel">Map</h4>
+            </div>
+            <div class="modal-body">
+              <p>Location of your booking.</p>
+              <div id="map"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Confirmed Modal -->
+      <div id="confirmed" class="modal fade" id="confirmedModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title" id="myModalLabel">Booking Confirmed</h4>
+            </div>
+            <div class="modal-body">
+              <p class="text-center">Your booking has been confirmed!</p>
+              <img src="images/tick-v3.gif" width="100%" />
+              <div class="text-center">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+              </div>
+
             </div>
           </div>
         </div>
@@ -242,12 +287,15 @@
     <!-- list.js JavaScript -->
     <script src="//cdnjs.cloudflare.com/ajax/libs/list.js/1.2.0/list.min.js"></script>
 
-    <!-- lorem JavaScript -->
+    <!-- Lorem JavaScript -->
     <script src="js/lorem.js"></script>
 
     <!-- Masonry JavaScript -->
     <script src="js/imagesloaded.js"></script>
     <script src="js/masonary.min.js"></script>
+
+    <!-- Google Maps -->
+    <script src="https://maps.googleapis.com/maps/api/js?callback=initMap" async defer></script>
 
     <!-- Date/Time input JavaScript -->
     <script type="text/javascript" src="js/bootstrap-datetimepicker.min.js" charset="UTF-8"></script>
@@ -264,16 +312,28 @@
           });
       }(jQuery));
 
-    $('.form_datetime').datetimepicker({
-        weekStart: 1,
-        todayBtn:  1,
-        autoclose: 1,
-        todayHighlight: 1,
-        startView: 2,
-        forceParse: 0,
-        showMeridian: 1,
-        pickerPosition: "bottom-left"
-    });
+      $('.form_datetime').datetimepicker({
+          weekStart: 1,
+          todayBtn:  1,
+          autoclose: 1,
+          todayHighlight: 1,
+          startView: 2,
+          forceParse: 0,
+          showMeridian: 1,
+          pickerPosition: "bottom-left"
+      });
+
+      function initMap() {
+          var mapDiv = document.getElementById('map');
+          var map = new google.maps.Map(mapDiv, {
+            center: {lat: -37.8171678, lng: 144.9623914},
+            zoom: 15,
+          });
+      }
+
+      $("#mapModal").on("shown.bs.modal", function () {
+          google.maps.event.trigger(map, "resize");
+      });
 
     </script>
 
